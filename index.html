@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Paski Banasa — krótkie, ręcznie rysowane komiksy z codzienności."
+    />
+    <title>Paski Banasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Paski Banasa — strona główna">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>PASKI BANASA</span>
+      </a>
+      <nav aria-label="Główna nawigacja">
+        <a href="#komiksy">Komiksy</a>
+        <a href="#o-autorze">O autorze</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Ręcznie rysowane. Regularnie nieregularne.</p>
+          <h1 id="hero-title">Trochę <em>śmiesznie.</em><br />Trochę <span>życiowo.</span></h1>
+          <p class="intro">
+            Krótkie historie o długich dniach, dziwnych rozmowach<br class="desktop-only" />
+            i rzeczach, które każdy zna aż za dobrze.
+          </p>
+          <a class="primary-button" href="#komiksy">
+            Czytaj najnowszy
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero-doodle" aria-hidden="true">
+          <svg viewBox="0 0 310 260" role="img">
+            <path d="M20 199C53 176 43 115 83 102c26-9 45 11 48 37 3-38 29-74 65-68 37 6 35 48 31 72 17-14 39-18 52-3 23 27-15 75-49 83-74 18-163 5-210-24Z" />
+            <path d="M82 99c-7-25-1-57 15-74M131 140c14-33 28-60 56-77M226 144c17-23 27-40 52-49" />
+            <path class="accent" d="M36 61c13 3 22 11 29 23M54 43c7 5 13 11 17 18M244 44c-10 8-17 18-22 30M269 61c-10 2-18 7-26 14" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="comics-section" id="komiksy" aria-labelledby="comics-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Archiwum</p>
+            <h2 id="comics-title">Najnowsze paski</h2>
+          </div>
+          <span class="issue-count">01 — 02</span>
+        </div>
+
+        <div class="comic-list">
+          <article class="comic-card featured">
+            <div class="comic-meta">
+              <span class="comic-number">#002</span>
+              <time datetime="2026-09-28">28.09.2026</time>
+            </div>
+            <button class="comic-image-button" type="button" aria-label="Powiększ komiks: Nie przejmuj się">
+              <img
+                src="assets/2026_09_nie_przejmuj_sie.png"
+                alt="Trzykadrowy komiks. Muzyk martwi się, że ludzie nabiają się z niego na forum. Kolega słoń mówi mu, by się nie przejmował, po czym sam zaczyna się przejmować."
+              />
+              <span class="zoom-hint" aria-hidden="true">Powiększ ↗</span>
+            </button>
+            <div class="comic-caption">
+              <h3>Nie przejmuj się</h3>
+              
+            </div>0
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-meta">
+              <span class="comic-number">#001</span>
+              <time datetime="2026-09-21">21.09.2026</time>
+            </div>
+            <button class="comic-image-button" type="button" aria-label="Powiększ komiks: Bezalkoholowe">
+              <img
+                src="assets/2026_09_bezalkoholowe.png"
+                alt="Dwukadrowy komiks. Klient bierze butelkę ze sklepowej półki, a sprzedawca przypomina mu, że jest bezalkoholowa."
+              />
+              <span class="zoom-hint" aria-hidden="true">Powiększ ↗</span>
+            </button>
+            <div class="comic-caption">
+              <h3>Bezalkoholowe</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="o-autorze" aria-labelledby="about-title">
+        <div class="about-label"><span>✳</span> O autorze</div>
+        <div>
+          <h2 id="about-title">Cześć, tu Banas.</h2>
+          <p>Rysuję to, co mnie bawi, dziwi albo uwiera. Czasem wszystko naraz.</p>
+        </div>
+        <a href="mailto:czesc@paskibanasia.pl">Napisz do mnie <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="logo footer-logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>PASKI BANASA</a>
+      <p>© 2026 Banas. Wszystkie kreski zastrzeżone.</p>
+    </footer>
+
+    <dialog class="lightbox" aria-label="Powiększony komiks">
+      <button class="lightbox-close" type="button" aria-label="Zamknij">×</button>
+      <img src="" alt="" />
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
