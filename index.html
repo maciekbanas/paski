@@ -31,8 +31,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Ręcznie rysowane. Regularnie nieregularne.</p>
-          <h1 id="hero-title">Trochę <em>śmiesznie.</em><br />Trochę <span>życiowo.</span></h1>
+          <h1 id="hero-title" class="visually-hidden">Paski Banasa</h1>
           <p class="intro">
             Krótkie historie o długich dniach, dziwnych rozmowach<br class="desktop-only" />
             i rzeczach, które każdy zna aż za dobrze.
@@ -41,13 +40,6 @@
             Czytaj najnowszy
             <span aria-hidden="true">↓</span>
           </a>
-        </div>
-        <div class="hero-doodle" aria-hidden="true">
-          <svg viewBox="0 0 310 260" role="img">
-            <path d="M20 199C53 176 43 115 83 102c26-9 45 11 48 37 3-38 29-74 65-68 37 6 35 48 31 72 17-14 39-18 52-3 23 27-15 75-49 83-74 18-163 5-210-24Z" />
-            <path d="M82 99c-7-25-1-57 15-74M131 140c14-33 28-60 56-77M226 144c17-23 27-40 52-49" />
-            <path class="accent" d="M36 61c13 3 22 11 29 23M54 43c7 5 13 11 17 18M244 44c-10 8-17 18-22 30M269 61c-10 2-18 7-26 14" />
-          </svg>
         </div>
       </section>
 
@@ -66,6 +58,9 @@
               <span class="comic-number">#002</span>
               <time datetime="2026-09-28">28.09.2026</time>
             </div>
+            <div class="comic-caption">
+              <h3>Nie przejmuj się</h3>
+            </div>
             <button class="comic-image-button" type="button" aria-label="Powiększ komiks: Nie przejmuj się">
               <img
                 src="assets/2026_09_nie_przejmuj_sie.png"
@@ -73,15 +68,15 @@
               />
               <span class="zoom-hint" aria-hidden="true">Powiększ ↗</span>
             </button>
-            <div class="comic-caption">
-              <h3>Nie przejmuj się</h3>
-            </div>
           </article>
 
           <article class="comic-card">
             <div class="comic-meta">
               <span class="comic-number">#001</span>
               <time datetime="2026-09-21">21.09.2026</time>
+            </div>
+            <div class="comic-caption">
+              <h3>Bezalkoholowe</h3>
             </div>
             <button class="comic-image-button" type="button" aria-label="Powiększ komiks: Bezalkoholowe">
               <img
@@ -90,9 +85,6 @@
               />
               <span class="zoom-hint" aria-hidden="true">Powiększ ↗</span>
             </button>
-            <div class="comic-caption">
-              <h3>Bezalkoholowe</h3>
-            </div>
           </article>
         </div>
       </section>
@@ -109,6 +101,9 @@
 
     <footer>
       <a class="logo footer-logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>PASKI BANASA</a>
+      <p class="visit-counter" aria-live="polite">
+        Odwiedziny na tym urządzeniu: <strong data-visit-count>—</strong>
+      </p>
       <p>© 2026 Banas. Wszystkie kreski zastrzeżone.</p>
     </footer>
 
