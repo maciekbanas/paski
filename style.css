@@ -9,6 +9,18 @@
 
 * { box-sizing: border-box; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -69,12 +81,10 @@ nav a:hover::after { right: 0; }
 main, footer { width: min(1180px, calc(100% - 48px)); margin: auto; }
 
 .hero {
-  min-height: 560px;
-  display: grid;
-  grid-template-columns: 1fr 410px;
+  min-height: 360px;
+  display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  overflow: hidden;
 }
 
 .eyebrow {
@@ -85,31 +95,6 @@ main, footer { width: min(1180px, calc(100% - 48px)); margin: auto; }
 }
 
 h1, h2, h3, p { margin-top: 0; }
-
-h1 {
-  max-width: 760px;
-  margin-bottom: 28px;
-  font-size: clamp(52px, 6.1vw, 88px);
-  line-height: .97;
-  letter-spacing: -.065em;
-  font-weight: 600;
-}
-
-h1 em {
-  font-family: Georgia, serif;
-  font-weight: 400;
-}
-
-h1 span { position: relative; z-index: 0; }
-h1 span::after {
-  content: "";
-  position: absolute;
-  height: .3em;
-  left: -.03em; right: -.08em; bottom: .03em;
-  z-index: -1;
-  background: var(--acid);
-  transform: rotate(-1deg);
-}
 
 .intro { color: var(--muted); font-size: 16px; line-height: 1.65; margin-bottom: 33px; }
 
@@ -127,11 +112,6 @@ h1 span::after {
 }
 .primary-button:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--acid); }
 .primary-button span { font-size: 18px; }
-
-.hero-doodle svg { width: 100%; overflow: visible; transform: rotate(3deg); }
-.hero-doodle path { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.hero-doodle path:first-child { fill: var(--acid); }
-.hero-doodle .accent { stroke-width: 2; }
 
 .comics-section { padding: 96px 0 110px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 58px; }
@@ -175,8 +155,8 @@ h2 { font-size: clamp(38px, 4.2vw, 58px); letter-spacing: -.045em; line-height: 
   transition: .2s;
 }
 .comic-image-button:hover .zoom-hint { opacity: 1; transform: none; }
-.comic-caption { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 22px; }
-.comic-caption h3 { font-size: 25px; letter-spacing: -.03em; }
+.comic-caption { margin: 22px 0 14px; }
+.comic-caption h3 { margin-bottom: 0; font-size: 25px; letter-spacing: -.03em; }
 .comic-caption p { margin: 3px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 
 .about {
@@ -197,6 +177,7 @@ h2 { font-size: clamp(38px, 4.2vw, 58px); letter-spacing: -.045em; line-height: 
 
 footer { height: 140px; display: flex; align-items: center; justify-content: space-between; }
 footer p { margin: 0; color: var(--muted); font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.visit-counter strong { color: var(--ink); font-weight: 500; }
 .footer-logo .logo-mark { width: 18px; height: 18px; box-shadow: 3px 2px 0 var(--ink); }
 
 .lightbox {
@@ -216,20 +197,16 @@ footer p { margin: 0; color: var(--muted); font: 10px "DM Mono", monospace; text
   .site-header { height: 74px; }
   nav { gap: 18px; }
   nav a:last-child { display: none; }
-  .hero { min-height: 620px; grid-template-columns: 1fr; padding: 70px 0 35px; }
-  .hero-doodle { width: 180px; justify-self: end; margin-top: -60px; opacity: .9; }
-  h1 { font-size: clamp(48px, 14vw, 68px); }
+  .hero { min-height: 330px; padding: 60px 0; }
   .desktop-only { display: none; }
   .comics-section { padding: 70px 0 80px; }
   .section-heading { margin-bottom: 40px; }
   .comic-list { gap: 64px; }
   .comic-card, .comic-card.featured { width: 100%; }
   .comic-image-button { padding: 8px; }
-  .comic-caption { grid-template-columns: 1fr; gap: 0; }
-  .comic-caption h3 { margin-bottom: 8px; }
   .about { grid-template-columns: 1fr; gap: 30px; padding: 60px 0; }
   .about > a { justify-self: start; }
-  footer { height: 125px; display: grid; gap: 12px; align-content: center; }
+  footer { min-height: 150px; height: auto; display: grid; gap: 12px; align-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
